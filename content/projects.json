@@ -1,0 +1,338 @@
+[
+  {
+    "id": 1,
+    "title": "Сайт завода «Союз Металл»",
+    "description": "Разработка для производителя и поставщика стальных деталей в B2B-сегменте. Сухой индустриальный продукт упакован в понятный, строгий и эффективный веб-инструмент",
+    "type": "Сайт",
+    "year": 2026,
+    "image": {
+      "src": "/images/projects/sojuzmetall.png",
+      "webp": "/images/projects/sojuzmetall.png",
+      "alt": "Союз Металл",
+      "width": 655,
+      "height": 373
+    },
+    "detailDescriptions": [
+      "Разработать новую версию сайта для компании «Союз Металл», которая занимается производством и поставками стальных деталей для юридических лиц",
+      "На сайте были созданы специальные разделы для каждого типа мероприятий. Это улучшило видимость сайта в поиске: теперь он привлекает трафик по запросам вроде «спектакли в Нижнем Тагиле» или «билеты на концерты», что открыло новый канал для привлечения клиентов \nПоявился раздел для популярных исполнителей. Поклонники теперь могут легко отслеживать приезд своих кумиров и мгновенно покупать билеты, что повышает лояльность и конверсию  В итоге получился современный, высокопроизводительный инструмент для бизнеса, который улучшает пользовательский опыт, делая процесс выбора и покупки билета интуитивным и приятным, а также создает уникальную атмосферу и укрепляет бренд, помогая продвижению в соцсетях через яркий визуал"
+    ],
+    "galleryImages": [
+      {
+        "src": "/images/projects/1-gallery-1-1784282904229-image-46.png",
+        "webp": "/images/projects/1-gallery-1-1784282904229-image-46.png",
+        "alt": "Сайт завода «Союз Металл» 1",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/1-gallery-2-1784282909559-image-47.png",
+        "webp": "/images/projects/1-gallery-2-1784282909559-image-47.png",
+        "alt": "Сайт завода «Союз Металл» 2",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/1-gallery-3-1784282914027-image-48.png",
+        "webp": "/images/projects/1-gallery-3-1784282914027-image-48.png",
+        "alt": "Сайт завода «Союз Металл» 3",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/1-gallery-4-1784282918633-image-49.png",
+        "webp": "/images/projects/1-gallery-4-1784282918633-image-49.png",
+        "alt": "Сайт завода «Союз Металл» 4",
+        "width": 655,
+        "height": 373
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Визуальное оформление социальных сетей компании",
+    "description": "Визуальное оформление социальных сетей компании: создание контента — посты, праздничные открытки, иконки и аватарки. Разработана единая стилистика для всех форматов",
+    "type": "SMM",
+    "year": 2025,
+    "image": {
+      "src": "/images/projects/smm.png",
+      "webp": "/images/projects/smm.png",
+      "alt": "Визуальное оформление",
+      "width": 655,
+      "height": 373
+    },
+    "detailDescriptions": [
+      "",
+      ""
+    ],
+    "galleryImages": [
+      {
+        "src": "/images/projects/smm.png",
+        "webp": "/images/projects/smm.png",
+        "alt": "Визуальное оформление",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/smm.png",
+        "webp": "/images/projects/smm.png",
+        "alt": "Визуальное оформление",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/smm.png",
+        "webp": "/images/projects/smm.png",
+        "alt": "Визуальное оформление",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/smm.png",
+        "webp": "/images/projects/smm.png",
+        "alt": "Визуальное оформление",
+        "width": 655,
+        "height": 373
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Экспресс-сайт для стоматологии «Дентал Классик»",
+    "description": "Прежняя версия сайта стоматологии «Дентал Классик» нуждалась в срочном обновлении — был необходим современный и удобный редизайн. Основное требование заключалось в том, чтобы процесс разработки сайта стоматологии был максимально быстрым и простым, но при этом результат соответствовал современным стандартам веб-дизайна и удобства для пользователей",
+    "type": "Сайт",
+    "year": 2025,
+    "image": {
+      "src": "/images/projects/dental.png",
+      "webp": "/images/projects/dental.png",
+      "alt": "Дентал Классик",
+      "width": 655,
+      "height": 373
+    },
+    "detailDescriptions": [
+      "",
+      ""
+    ],
+    "galleryImages": [
+      {
+        "src": "/images/projects/dental.png",
+        "webp": "/images/projects/dental.png",
+        "alt": "Дентал Классик",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/dental.png",
+        "webp": "/images/projects/dental.png",
+        "alt": "Дентал Классик",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/dental.png",
+        "webp": "/images/projects/dental.png",
+        "alt": "Дентал Классик",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/dental.png",
+        "webp": "/images/projects/dental.png",
+        "alt": "Дентал Классик",
+        "width": 655,
+        "height": 373
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Сайт агентства «Нижнетагильские гастроли»",
+    "description": "Основной фокус был сделан на создании уникальной, запоминающейся атмосферы, которая выгодно отличает клиента от конкурентов и позволяет с лёгкостью приобрести билеты на мероприятия любого типа.",
+    "type": "Сайт",
+    "year": 2025,
+    "image": {
+      "src": "/images/projects/gastroli.png",
+      "webp": "/images/projects/gastroli.png",
+      "alt": "Нижнетагильские гастроли",
+      "width": 655,
+      "height": 373
+    },
+    "detailDescriptions": [
+      "",
+      ""
+    ],
+    "galleryImages": [
+      {
+        "src": "/images/projects/gastroli.png",
+        "webp": "/images/projects/gastroli.png",
+        "alt": "Нижнетагильские гастроли",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/gastroli.png",
+        "webp": "/images/projects/gastroli.png",
+        "alt": "Нижнетагильские гастроли",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/gastroli.png",
+        "webp": "/images/projects/gastroli.png",
+        "alt": "Нижнетагильские гастроли",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/gastroli.png",
+        "webp": "/images/projects/gastroli.png",
+        "alt": "Нижнетагильские гастроли",
+        "width": 655,
+        "height": 373
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Редизайн сайта производственной компании «Вольмет»",
+    "description": "Основной фокус был сделан на создании уникальной, запоминающейся атмосферы, которая выгодно отличает клиента от конкурентов и позволяет с лёгкостью приобрести билеты на мероприятия любого типа.",
+    "type": "Сайт",
+    "year": 2025,
+    "image": {
+      "src": "/images/projects/volmet.png",
+      "webp": "/images/projects/volmet.png",
+      "alt": "Вольмет",
+      "width": 655,
+      "height": 373
+    },
+    "detailDescriptions": [
+      "",
+      ""
+    ],
+    "galleryImages": [
+      {
+        "src": "/images/projects/volmet.png",
+        "webp": "/images/projects/volmet.png",
+        "alt": "Вольмет",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/volmet.png",
+        "webp": "/images/projects/volmet.png",
+        "alt": "Вольмет",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/volmet.png",
+        "webp": "/images/projects/volmet.png",
+        "alt": "Вольмет",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/volmet.png",
+        "webp": "/images/projects/volmet.png",
+        "alt": "Вольмет",
+        "width": 655,
+        "height": 373
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Линейка туристических сувениров Индустриальные дети",
+    "description": "Проект предлагает новый взгляд на промышленное предприятие как на культурный и исторический феномен. Завод рассматривается не просто как производственный объект, а как архитектурное сердце города и основа его идентичности. Фокус смещается на осмысление индустриального наследия как ключевого компонента прошлого, настоящего и будущего региона",
+    "type": "Айдентика",
+    "year": 2023,
+    "image": {
+      "src": "/images/projects/children.png",
+      "webp": "/images/projects/children.png",
+      "alt": "Индустриальные дети",
+      "width": 655,
+      "height": 373
+    },
+    "detailDescriptions": [
+      "",
+      ""
+    ],
+    "galleryImages": [
+      {
+        "src": "/images/projects/children.png",
+        "webp": "/images/projects/children.png",
+        "alt": "Индустриальные дети",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/children.png",
+        "webp": "/images/projects/children.png",
+        "alt": "Индустриальные дети",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/children.png",
+        "webp": "/images/projects/children.png",
+        "alt": "Индустриальные дети",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/children.png",
+        "webp": "/images/projects/children.png",
+        "alt": "Индустриальные дети",
+        "width": 655,
+        "height": 373
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Фирменный стиль интернет магазина корейской косметики",
+    "description": "Основной фокус был сделан на создании уникальной, запоминающейся атмосферы, которая выгодно отличает клиента от конкурентов и позволяет с лёгкостью приобрести билеты на мероприятия любого типа.",
+    "type": "Фирменный стиль",
+    "year": 2024,
+    "image": {
+      "src": "/images/projects/korea.png",
+      "webp": "/images/projects/korea.png",
+      "alt": "Корейская косметика",
+      "width": 655,
+      "height": 373
+    },
+    "detailDescriptions": [
+      "",
+      ""
+    ],
+    "galleryImages": [
+      {
+        "src": "/images/projects/korea.png",
+        "webp": "/images/projects/korea.png",
+        "alt": "Корейская косметика",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/korea.png",
+        "webp": "/images/projects/korea.png",
+        "alt": "Корейская косметика",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/korea.png",
+        "webp": "/images/projects/korea.png",
+        "alt": "Корейская косметика",
+        "width": 655,
+        "height": 373
+      },
+      {
+        "src": "/images/projects/korea.png",
+        "webp": "/images/projects/korea.png",
+        "alt": "Корейская косметика",
+        "width": 655,
+        "height": 373
+      }
+    ]
+  }
+]

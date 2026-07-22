@@ -1,0 +1,29 @@
+@theme {
+    --font-onest: "Onest", sans-serif;
+    --font-neutral-face: "Neutral Face", sans-serif;
+
+    --text-h1: 2rem;
+    --text-h1--line-height: 100%;
+    --text-h1--letter-spacing: 0rem;
+
+    --text-3xl: 2rem;
+    --text-3xl--line-height: 100%;
+
+    --text-h2: 1.25rem;
+    --text-h2--line-height: 112%;
+    --text-h2--letter-spacing: 0rem;
+
+    --text-20: 1.25rem;
+
+    --text-t1: 1rem;
+    --text-t1--line-height: 140%;
+    --text-t1--letter-spacing: 0rem;
+
+    --text-t2: 0.875rem;
+    --text-t2--line-height: 140%;
+    --text-t2--letter-spacing: 0rem;
+
+    --text-t3: 0.65rem;
+    --text-t3--line-height: 140%;
+    --text-t3--letter-spacing: 0rem;
+}

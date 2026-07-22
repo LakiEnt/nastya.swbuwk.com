@@ -1,0 +1,22 @@
+@theme {
+    --color-bw-0: #ffffff;
+    --color-bw-15: #f9fafd;
+    --color-bw-25: #eff2f8;
+    --color-bw-40: #e5e8f0;
+    --color-bw-50: #aab0bc;
+    --color-bw-75: #6d7483;
+    --color-bw-100: #262a33;
+
+    --color-4f484c: #4f484c;
+    --color-ffb9D1: #ffb9d1;
+    --color-1c1a20: #1c1a20;
+    --color-a99ba4: #a99ba4;
+
+    --color-accent-50: #f28a9e;
+    --color-accent-100: #931a31;
+    --color-accent-logo: #931a31;
+    --color-accent-glass: #e7ebf5cc;
+
+    --color-error-primary: #ff0000;
+    --color-error-secondary: #ff7878;
+}

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "./text.css";
+@import "./colors.css";
+@import "./fonts.css";
+/*@import './animation.css';*/
+/*@plugin '@tailwindcss/typography';*/
+/*@source '../../../../packages/constructor';*/
+
+@theme {
+    --shadow-mobile: 0px 20px 32px 0px #5a73ac33;
+    --shadow-desktop: 0px 0px 72px 0px #5a73ac33;
+}
+@utility container {
+    @apply mx-auto px-5 lg:px-10;
+}
