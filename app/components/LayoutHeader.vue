@@ -3,50 +3,62 @@
         class="fixed inset-x-0 top-0 z-50 h-14 border-b border-bw-40/70 bg-bw-0/90 backdrop-blur lg:h-16"
     >
         <nav
-            class="container flex h-full items-center justify-around lg:space-x-10"
+            class="container flex h-full items-center justify-between lg:space-x-10"
         >
-            <BaseLink to="/" label="Проекты" />
-            <BaseLink to="/projects" label="Иллюстрации" />
-            <BaseLink to="#" label="Резюме" />
-            <a
-                href="https://t.me/sergeeva_anastasiiia"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram"
-                class="inline-flex size-8 items-center justify-center text-4f484c transition-colors duration-300 hover:text-ffb9D1 lg:ml-auto"
-            >
-                <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="size-6"
+            <div class="flex space-x-5">
+                <BaseLink to="/" label="Проекты" />
+                <BaseLink to="/projects" label="Иллюстрации" />
+                <BaseLink to="/about" label="Резюме" />
+            </div>
+            <div class="flex space-x-5">
+                <a
+                    href="https://t.me/sergeeva_anastasiiia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Telegram"
+                    class="inline-flex size-8 items-center justify-center text-4f484c transition-colors duration-300 hover:text-ffb9D1 lg:ml-auto"
                 >
-                    <path
-                        d="M21.94 4.16a1.45 1.45 0 0 0-1.52-.24L3.42 10.48a1.37 1.37 0 0 0 .08 2.59l4.32 1.34 1.67 5.18a1.39 1.39 0 0 0 2.42.45l2.32-2.87 4.25 3.11a1.49 1.49 0 0 0 2.35-.9l1.6-13.79a1.45 1.45 0 0 0-.49-1.43ZM19.4 6.75l-8.6 7.61a.75.75 0 0 0-.24.45l-.34 2.69-.92-2.86a.74.74 0 0 0-.49-.48l-2.58-.8 13.17-5.08Z"
-                    />
-                </svg>
-            </a>
-            <a
-                href="mailto:sergbeu18@gmail.com"
-                aria-label="E-mail"
-                class="inline-flex size-8 items-center justify-center text-4f484c transition-colors duration-300 hover:text-ffb9D1"
-            >
-                <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="size-6"
+                    <svg
+                        width="44"
+                        height="44"
+                        viewBox="0 0 44 44"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <rect width="44" height="44" fill="#F1F1F2" />
+                        <path
+                            d="M12.5 13H32.5C35 13 35 13 35 15.5V30.5C35 33 35 33 32.5 33H12.5C10 33 10 33 10 30.5V15.5C10 13 10 13 12.5 13Z"
+                            fill="#4F474C"
+                        />
+                        <path d="M35 15.5L22.5 24.25L10 15.5" fill="#4F474C" />
+                        <path
+                            d="M35 15.5C35 13 35 13 32.5 13H12.5C10 13 10 13 10 15.5M35 15.5V30.5C35 33 35 33 32.5 33H12.5C10 33 10 33 10 30.5V15.5M35 15.5L22.5 24.25L10 15.5"
+                            stroke="#F1F1F2"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </a>
+                <a
+                    href="mailto:sergbeu18@gmail.com"
+                    aria-label="E-mail"
+                    class="inline-flex size-8 items-center justify-center text-4f484c transition-colors duration-300 hover:text-ffb9D1"
                 >
-                    <path
-                        d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Z"
-                    />
-                    <path d="m3 8 9 6 9-6" />
-                </svg>
-            </a>
+                    <svg
+                        width="44"
+                        height="44"
+                        viewBox="0 0 44 44"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <rect width="44" height="44" fill="#F1F1F2" />
+                        <path
+                            d="M9.61718 20.5976C17.0023 17.3452 26.5593 13.3798 27.8785 12.831C31.339 11.3945 32.4008 11.6698 31.8714 14.8511C31.4912 17.1376 30.3941 24.7077 29.5197 29.4196C29.0009 32.2138 27.8368 32.545 26.0064 31.3361C25.1261 30.7543 20.6832 27.8131 19.7189 27.1225C18.8386 26.4931 17.6246 25.736 19.1471 24.2448C19.6889 23.7136 23.2405 20.3188 26.0076 17.6764C26.3701 17.3293 25.9147 16.7593 25.4963 17.0376C21.7667 19.5135 16.5957 22.9501 15.9376 23.3977C14.9433 24.0736 13.9885 24.3836 12.2744 23.8907C10.9793 23.5183 9.71414 23.0742 9.22172 22.9048C7.32548 22.253 7.77559 21.4088 9.61718 20.5976Z"
+                            fill="#4F474C"
+                        />
+                    </svg>
+                </a>
+            </div>
         </nav>
     </header>
 </template>

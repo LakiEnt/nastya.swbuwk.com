@@ -50,7 +50,7 @@
             <H2Title label="Проекты" />
             <div class="flex flex-col space-y-8 lg:space-y-10 mt-8 lg:mt-15">
                 <ProjectCard
-                    v-for="project in projects"
+                    v-for="project in filteredProjects"
                     :key="project.title"
                     :project="project"
                 />
@@ -88,5 +88,9 @@ import ProjectCard from "@/components/ui/ProjectCard.vue";
 
 const { data: projects } = await useFetch("/api/projects", {
     default: () => [],
+});
+const filter = ["Айдентика", "Фирменный стиль"];
+const filteredProjects = computed(() => {
+    return projects.value.filter((project) => !filter.includes(project.type));
 });
 </script>

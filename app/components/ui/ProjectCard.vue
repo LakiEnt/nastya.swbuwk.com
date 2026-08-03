@@ -1,7 +1,7 @@
 <template>
     <NuxtLink
         :to="`/projects/${project.id}`"
-        class="flex max-lg:flex-col max-lg:space-y-4.5 lg:space-x-10"
+        class="flex max-lg:flex-col max-lg:space-y-4.5 lg:space-x-10 justify-between"
     >
         <picture class="bg-[#F1F1F2]">
             <source :srcset="project.image.webp" type="image/webp" />
