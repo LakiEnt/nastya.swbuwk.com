@@ -1,18 +1,10 @@
-import {
-  createHmac,
-  randomBytes,
-  scrypt as scryptCallback,
-  timingSafeEqual,
-} from "node:crypto";
-import { promisify } from "node:util";
-
-const scrypt = promisify(scryptCallback);
+import { createHmac, timingSafeEqual } from "node:crypto";
 
 export const ADMIN_SESSION_COOKIE = "admin_session";
+export const ADMIN_PASSWORD = "change-me-admin-password";
 
 export interface AdminCredentialsConfig {
   adminUsername?: string;
-  adminPasswordHash?: string;
 }
 
 interface SessionPayload {
@@ -43,43 +35,12 @@ function safeEqual(left: string, right: string): boolean {
   return timingSafeEqual(leftBuffer, rightBuffer);
 }
 
-export async function hashPassword(
-  password: string,
-  salt = randomBytes(16).toString("base64url"),
-): Promise<string> {
-  const n = 16_384;
-  const r = 8;
-  const p = 1;
-  const key = (await scrypt(password, salt, 64, { N: n, r, p })) as Buffer;
-
-  return `scrypt$${n}$${r}$${p}$${salt}$${key.toString("base64url")}`;
-}
-
-export async function verifyPassword(
-  password: string,
-  storedHash: string,
-): Promise<boolean> {
-  const [algorithm, n, r, p, salt, expectedKey] = storedHash.split("$");
-
-  if (algorithm !== "scrypt" || !n || !r || !p || !salt || !expectedKey) {
-    return false;
-  }
-
-  const key = (await scrypt(password, salt, 64, {
-    N: Number(n),
-    r: Number(r),
-    p: Number(p),
-  })) as Buffer;
-
-  return safeEqual(key.toString("base64url"), expectedKey);
-}
-
 export async function verifyAdminCredentials(
   username: string,
   password: string,
   config: AdminCredentialsConfig,
 ): Promise<boolean> {
-  if (!config.adminUsername || !config.adminPasswordHash) {
+  if (!config.adminUsername) {
     return false;
   }
 
@@ -87,7 +48,7 @@ export async function verifyAdminCredentials(
     return false;
   }
 
-  return verifyPassword(password, config.adminPasswordHash);
+  return safeEqual(password, ADMIN_PASSWORD);
 }
 
 export function createSessionToken(

@@ -1,8 +1,8 @@
 import {
+  ADMIN_PASSWORD,
   ADMIN_SESSION_COOKIE,
   verifySessionToken,
 } from "../utils/admin-auth";
-import { getAdminRuntimeConfig } from "../utils/admin-config";
 
 export default defineEventHandler((event) => {
   const pathname = getRequestURL(event).pathname;
@@ -16,9 +16,8 @@ export default defineEventHandler((event) => {
     return;
   }
 
-  const config = getAdminRuntimeConfig();
   const token = getCookie(event, ADMIN_SESSION_COOKIE);
-  const session = verifySessionToken(token, config.adminPasswordHash);
+  const session = verifySessionToken(token, ADMIN_PASSWORD);
 
   if (!session) {
     if (isAdminApi) {

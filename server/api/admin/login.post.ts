@@ -1,4 +1,5 @@
 import {
+  ADMIN_PASSWORD,
   ADMIN_SESSION_COOKIE,
   createSessionToken,
   verifyAdminCredentials,
@@ -26,7 +27,7 @@ export default defineEventHandler(async (event) => {
 
   const token = createSessionToken(
     body.username?.trim() ?? "",
-    config.adminPasswordHash ?? "",
+    ADMIN_PASSWORD,
     sessionMaxAgeSeconds * 1000,
   );
 
