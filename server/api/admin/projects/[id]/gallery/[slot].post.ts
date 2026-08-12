@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { basename, extname, join } from "node:path";
 
+import { getProjectImagesUploadDir } from "../../../../../utils/project-images";
 import { getProject, updateProject } from "../../../../../utils/projects";
 
 const allowedMimeTypes = new Map([
@@ -59,7 +60,7 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  const uploadDir = join(process.cwd(), "public", "images", "projects");
+  const uploadDir = getProjectImagesUploadDir();
   const baseName = basename(image.filename ?? "project", extname(image.filename ?? ""));
   const fileName = `${id}-gallery-${slot + 1}-${Date.now()}-${sanitizeFileName(baseName)}${extension}`;
   const publicPath = `/images/projects/${fileName}`;

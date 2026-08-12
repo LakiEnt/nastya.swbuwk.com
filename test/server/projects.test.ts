@@ -11,6 +11,7 @@ import {
   updateProject,
   writeProjects,
 } from "../../server/utils/projects.ts";
+import { getProjectImagesUploadDir } from "../../server/utils/project-images.ts";
 
 describe("project JSON storage", () => {
   it("creates a project with the next numeric id", async () => {
@@ -197,5 +198,14 @@ describe("project JSON storage", () => {
     assert.deepEqual(project?.detailDescriptions, ["Top page text", "Bottom page text"]);
     assert.equal(project?.galleryImages?.length, 4);
     assert.equal(project?.galleryImages?.[3].src, "/images/projects/four.png");
+  });
+});
+
+describe("project image uploads", () => {
+  it("stores uploads in the runtime public directory", () => {
+    assert.equal(
+      getProjectImagesUploadDir({ cwd: "/app" }),
+      "/app/public/images/projects",
+    );
   });
 });
