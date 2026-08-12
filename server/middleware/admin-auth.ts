@@ -18,7 +18,7 @@ export default defineEventHandler((event) => {
 
   const config = getAdminRuntimeConfig();
   const token = getCookie(event, ADMIN_SESSION_COOKIE);
-  const session = verifySessionToken(token, config.sessionSecret);
+  const session = verifySessionToken(token, config.adminPasswordHash);
 
   if (!session) {
     if (isAdminApi) {

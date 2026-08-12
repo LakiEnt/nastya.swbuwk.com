@@ -11,13 +11,6 @@ export default defineEventHandler(async (event) => {
   const body = await readBody<{ username?: string; password?: string }>(event);
   const config = getAdminRuntimeConfig();
 
-  if (!config.sessionSecret) {
-    throw createError({
-      statusCode: 500,
-      statusMessage: "Admin session secret is not configured",
-    });
-  }
-
   const isValid = await verifyAdminCredentials(
     body.username?.trim() ?? "",
     body.password ?? "",
@@ -33,7 +26,7 @@ export default defineEventHandler(async (event) => {
 
   const token = createSessionToken(
     body.username?.trim() ?? "",
-    config.sessionSecret,
+    config.adminPasswordHash ?? "",
     sessionMaxAgeSeconds * 1000,
   );
 
