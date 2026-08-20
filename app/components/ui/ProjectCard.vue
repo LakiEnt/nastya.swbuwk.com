@@ -3,19 +3,21 @@
         :to="`/projects/${project.id}`"
         class="flex max-lg:flex-col max-lg:space-y-4.5 lg:space-x-10 justify-between"
     >
-        <picture class="bg-[#F1F1F2]">
-            <source :srcset="project.image.webp" type="image/webp" />
-            <img
-                :src="project.image.src"
-                :alt="project.image.alt"
-                :width="project.image.width"
-                :height="project.image.height"
-            />
-        </picture>
+        <div class="flex space-x-10">
+            <picture class="bg-[#F1F1F2]">
+                <source :srcset="project.image.webp" type="image/webp" />
+                <img
+                    :src="project.image.src"
+                    :alt="project.image.alt"
+                    :width="project.image.width"
+                    :height="project.image.height"
+                />
+            </picture>
+            <p class="text-t1 text-4f484c">{{ project.year }}</p>
+        </div>
 
         <div class="flex flex-col justify-between">
-            <div class="flex justify-between">
-                <p class="text-t1 text-4f484c">{{ project.year }}</p>
+            <div class="flex justify-end">
                 <div class="lg:max-w-82.5">
                     <h3
                         class="text-1c1a20 leading-none font-neutral-face text-[18px] lg:text-2xl text-right"

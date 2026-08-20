@@ -5,31 +5,28 @@
                 <h1
                     class="font-neutral-face text-4xl lg:text-7xl text-left leading-[105%] w-full"
                 >
-                    немного
-                    <span class="text-ffb9D1 leading-[126%]">обо мне</span>
+                    {{ about.titlePrefix }}
+                    <span class="text-ffb9D1 leading-[126%]">{{ about.titleAccent }}</span>
                 </h1>
                 <picture>
-                    <source srcset="/images/front3.png" type="image/webp" />
+                    <source :srcset="about.image.webp" type="image/webp" />
                     <img
                         class=""
-                        src="/images/front3.png"
-                        width="272"
-                        height="380"
-                        alt="Настя Сергеева"
+                        :src="about.image.src"
+                        :width="about.image.width"
+                        :height="about.image.height"
+                        :alt="about.image.alt"
                     />
                 </picture>
             </header>
 
             <div class="max-w-xl space-y-4 mt-8 lg:mt-auto">
-                <p class="text-4f484c text-20 leading-6">
-                    Меня зовут Настя. Я занимаюсь дизайном 3 года. Мой опыт —
-                    это работа с абсолютно разными клиентами: от локальных
-                    стартапов до крупных компаний
-                </p>
-                <p class="text-4f484c text-20 leading-6">
-                    Я умею переключаться между задачами: создаю целостные
-                    бренд-системы, удобные и современные сайты,
-                    а также привлекательный контент для социальных сетей
+                <p
+                    v-for="(paragraph, index) in about.intro"
+                    :key="index"
+                    class="text-4f484c text-20 leading-6"
+                >
+                    {{ paragraph }}
                 </p>
             </div>
         </section>
@@ -57,7 +54,7 @@
 
         <section class="h-screen flex justify-center items-center">
             <p class="text-[4rem] relative text-4f484c">
-                БУДУ РАДА ПООБЩАТЬСЯ
+                {{ about.contactText }}
 
                 <img
                     class="absolute -right-12 -bottom-4.5"
@@ -86,26 +83,22 @@
 </template>
 
 <script setup lang="ts">
-const aboutMeList = [
-    {
-        title: "Образование",
-        description:
-            "Моё формальное образование началось в Уральском колледже прикладного искусства и дизайна, где я изучала графический дизайн. Это дало мне крепкую теоретическую базу и понимание фундаментальных принципов",
-    },
-    {
-        title: "графический дизайн",
-        description:
-       "Сотрудничество с Центром развития туризма города Нижний Тагил: разработка дизайна для туристических направлений, работа с региональной айдентикой и поиск визуальных образов, которые цепляют разную аудиторию",
-    },
-    {
-        title: "ОПЫТ РАБОТЫ",
-        description:
-            "В студии Евгения Батюкова я научилась работать с крупными, комплексными проектами: выстраивать логичную структуру, проектировать интуитивные пользовательские сценарии и создавать визуал, который работает на бизнес-цели",
-    },
-    {
-        title: "жизнь",
-        description:
-            "В свободное время люблю рисовать для души, открывать для себя неочевидные грани дизайна в путешествиях, кино и играх. Верю, что вдохновение и свежий взгляд можно найти где угодно.",
-    },
-];
+const { data: about } = await useFetch("/api/about", {
+    default: () => ({
+        titlePrefix: "",
+        titleAccent: "",
+        image: {
+            src: "",
+            webp: "",
+            width: 272,
+            height: 380,
+            alt: "",
+        },
+        intro: ["", ""],
+        items: [],
+        contactText: "",
+    }),
+});
+
+const aboutMeList = computed(() => about.value.items);
 </script>

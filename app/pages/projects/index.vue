@@ -11,17 +11,21 @@
 
             <!-- <picture> -->
             <!-- <source srcset="/images/projects.png" type="image/webp" /> -->
-            <Transition name="idea-image" mode="out-in">
-                <img
-                    :key="ideaImageSrc"
-                    class="relative max-lg:mt-18 w-full h-auto mx-auto -mt-35 max-w-220 rotate-3 cursor-pointer"
-                    :src="ideaImageSrc"
-                    width="877"
-                    height="549"
-                    alt="Настя Сергеева"
-                    @click="nextIdeaImage"
-                />
-            </Transition>
+            <div
+                class="relative max-lg:mt-18 w-full mx-auto -mt-35 max-w-290 aspect-877/549 rotate-3"
+            >
+                <Transition name="idea-image" mode="out-in">
+                    <img
+                        :key="ideaImageSrc"
+                        class="absolute inset-0 w-full h-full object-contain cursor-pointer"
+                        :src="ideaImageSrc"
+                        width="877"
+                        height="549"
+                        alt="Настя Сергеева"
+                        @click="nextIdeaImage"
+                    />
+                </Transition>
+            </div>
             <!-- </picture> -->
             <div class="absolute space-y-3 top-1/2">
                 <p class="text-1c1a20 text-sm lg:text-20">Переключить стиль</p>

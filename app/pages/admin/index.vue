@@ -34,12 +34,21 @@
                     </h1>
                 </div>
 
-                <NuxtLink
-                    to="/admin/projects"
-                    class="inline-flex h-11 items-center justify-center rounded-md bg-ffb9D1 px-5 text-base font-bold text-4f484c transition hover:bg-ffb9D1/80"
-                >
-                    Управлять проектами
-                </NuxtLink>
+                <div class="flex flex-col gap-3 sm:flex-row">
+                    <NuxtLink
+                        to="/admin/about"
+                        class="inline-flex h-11 items-center justify-center rounded-md border border-4f484c/15 bg-white px-5 text-base font-bold text-4f484c transition hover:border-4f484c/35"
+                    >
+                        Редактировать обо мне
+                    </NuxtLink>
+
+                    <NuxtLink
+                        to="/admin/projects"
+                        class="inline-flex h-11 items-center justify-center rounded-md bg-ffb9D1 px-5 text-base font-bold text-4f484c transition hover:bg-ffb9D1/80"
+                    >
+                        Управлять проектами
+                    </NuxtLink>
+                </div>
             </div>
 
             <div class="mt-10 grid gap-5 lg:grid-cols-3">
@@ -53,9 +62,9 @@
 
                 <article class="rounded-lg border border-4f484c/10 bg-white p-5">
                     <p class="text-sm text-4f484c/60">Раздел</p>
-                    <h2 class="mt-3 text-xl font-bold">Главная</h2>
+                    <h2 class="mt-3 text-xl font-bold">Обо мне</h2>
                     <p class="mt-3 text-t1 text-4f484c/70">
-                        Здесь можно будет менять вступительный текст и избранные работы.
+                        Редактирование заголовка, вступительного текста и блоков страницы.
                     </p>
                 </article>
 

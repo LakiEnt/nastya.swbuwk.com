@@ -3,7 +3,7 @@
         v-if="project"
         class="container space-y-10 pb-20 pt-13.75 lg:space-y-20 lg:pb-32 lg:pt-15"
     >
-        <section class="max-w-4xl space-y-6 lg:space-y-8 ">
+        <section class="max-w-4xl space-y-6 lg:space-y-8">
             <NuxtLink
                 to="/projects"
                 class="text-t1 text-4f484c/60 transition hover:text-4f484c"
@@ -34,7 +34,7 @@
                 :alt="image.alt"
                 :width="image.width"
                 :height="image.height"
-            >
+            />
         </section>
 
         <p
@@ -53,14 +53,31 @@
                 :alt="image.alt"
                 :width="image.width"
                 :height="image.height"
-            >
+            />
         </section>
+
+        <ProjectNavigation
+            v-if="projects.length"
+            :label="projectNavigation.label"
+            :previous-id="projectNavigation.previousId"
+            :next-id="projectNavigation.nextId"
+            :current-to="currentProjectTo"
+        />
     </main>
 </template>
 
 <script setup>
+import ProjectNavigation from "@/components/ui/ProjectNavigation.vue";
+import { getProjectNavigation } from "@/utils/project-navigation";
+
 const route = useRoute();
-const { data: project, error } = await useFetch(`/api/projects/${route.params.slug}`);
+const { data: project, error } = await useFetch(
+    `/api/projects/${route.params.slug}`,
+);
+const { data: projects } = await useFetch("/api/projects", {
+    key: "projects-list",
+    default: () => [],
+});
 
 if (error.value) {
     throw createError({
@@ -69,6 +86,16 @@ if (error.value) {
     });
 }
 
-const firstImages = computed(() => project.value?.galleryImages.slice(0, 2) ?? []);
-const lastImages = computed(() => project.value?.galleryImages.slice(2, 4) ?? []);
+const firstImages = computed(
+    () => project.value?.galleryImages.slice(0, 2) ?? [],
+);
+const lastImages = computed(
+    () => project.value?.galleryImages.slice(2, 4) ?? [],
+);
+const projectNavigation = computed(() => {
+    return getProjectNavigation(projects.value, project.value?.id ?? 0);
+});
+const currentProjectTo = computed(
+    () => `/projects/${project.value?.id ?? route.params.slug}`,
+);
 </script>
