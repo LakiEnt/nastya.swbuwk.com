@@ -34,8 +34,21 @@
                         :height="about?.image.height"
                     >
 
-                    <p class="mt-4 text-sm text-4f484c/60">
-                        Изображение страницы пока хранится в файле контента.
+                    <label class="mt-5 block">
+                        <span class="text-sm text-4f484c/70">Заменить картинку</span>
+                        <input
+                            class="mt-2 block w-full text-sm text-4f484c file:mr-4 file:h-10 file:rounded-md file:border-0 file:bg-ffb9D1 file:px-4 file:text-sm file:font-bold file:text-4f484c"
+                            accept="image/jpeg,image/png,image/webp,image/gif"
+                            type="file"
+                            @change="uploadImage"
+                        >
+                    </label>
+
+                    <p
+                        v-if="imageMessage"
+                        class="mt-4 rounded-md bg-bw-15 px-4 py-3 text-sm text-4f484c/70"
+                    >
+                        {{ imageMessage }}
                     </p>
                 </aside>
 
@@ -193,6 +206,7 @@ const form = reactive({
 });
 const isSaving = ref(false);
 const formMessage = ref("");
+const imageMessage = ref("");
 
 watchEffect(() => {
     if (!about.value) {
@@ -240,6 +254,34 @@ async function saveAbout() {
         formMessage.value = "Не удалось сохранить страницу";
     } finally {
         isSaving.value = false;
+    }
+}
+
+async function uploadImage(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+
+    if (!file) {
+        return;
+    }
+
+    imageMessage.value = "Загружаем картинку...";
+
+    try {
+        const body = new FormData();
+        body.append("image", file);
+
+        const updatedAbout = await $fetch("/api/admin/about/image", {
+            method: "POST",
+            body,
+        });
+        about.value = updatedAbout;
+        await refresh();
+        imageMessage.value = "Картинка обновлена";
+    } catch {
+        imageMessage.value = "Не удалось загрузить картинку";
+    } finally {
+        input.value = "";
     }
 }
 </script>

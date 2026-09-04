@@ -26,6 +26,7 @@ export interface AboutContent {
 export interface AboutUpdate {
   titlePrefix?: string;
   titleAccent?: string;
+  image?: AboutImage;
   intro?: [string, string];
   items?: AboutItem[];
   contactText?: string;
@@ -74,7 +75,7 @@ export async function updateAbout(
   const nextAbout = normalizeAbout({
     ...about,
     ...update,
-    image: about.image,
+    image: update.image ?? about.image,
     intro: update.intro ?? about.intro,
     items: update.items ?? about.items,
   });

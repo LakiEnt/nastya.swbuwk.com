@@ -9,6 +9,7 @@ import {
   updateAbout,
   writeAbout,
 } from "../../server/utils/about.ts";
+import { getAboutImagesUploadDir } from "../../server/utils/about-images.ts";
 
 describe("about JSON storage", () => {
   it("reads about page content with normalized list items", async () => {
@@ -98,5 +99,58 @@ describe("about JSON storage", () => {
     assert.equal(about.items[0].description, "Новое описание");
     assert.equal(about.image.src, "/images/front3.png");
     assert.equal((await readAbout(filePath)).contactText, "Напишите мне");
+  });
+
+  it("updates about page image", async () => {
+    const filePath = join(await mkdtemp(join(tmpdir(), "portfolio-about-")), "about.json");
+
+    await writeAbout(
+      {
+        titlePrefix: "немного",
+        titleAccent: "обо мне",
+        image: {
+          src: "/images/front3.png",
+          webp: "/images/front3.png",
+          width: 272,
+          height: 380,
+          alt: "Настя Сергеева",
+        },
+        intro: ["Intro one", "Intro two"],
+        items: [
+          {
+            title: "Образование",
+            description: "Описание образования",
+          },
+        ],
+        contactText: "БУДУ РАДА ПООБЩАТЬСЯ",
+      },
+      filePath,
+    );
+
+    const about = await updateAbout(
+      {
+        image: {
+          src: "/images/about/new.png",
+          webp: "/images/about/new.png",
+          width: 272,
+          height: 380,
+          alt: "Настя Сергеева",
+        },
+      },
+      filePath,
+    );
+
+    assert.equal(about.image.src, "/images/about/new.png");
+    assert.equal(about.image.webp, "/images/about/new.png");
+    assert.equal((await readAbout(filePath)).image.src, "/images/about/new.png");
+  });
+});
+
+describe("about image uploads", () => {
+  it("stores uploads in the runtime public directory", () => {
+    assert.equal(
+      getAboutImagesUploadDir({ cwd: "/app" }),
+      "/app/public/images/about",
+    );
   });
 });

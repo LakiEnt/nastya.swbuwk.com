@@ -8,9 +8,7 @@
             <ul class="flex items-center space-x-5">
                 <li>
                     <a
-                        href="https://t.me/sergeeva_anastasiiia"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="mailto:sergbeu18@gmail.com"
                         aria-label="Telegram"
                         class="inline-flex size-8 items-center justify-center text-4f484c transition-colors duration-300 hover:text-ffb9D1"
                     >
@@ -41,7 +39,9 @@
                 </li>
                 <li>
                     <a
-                        href="mailto:sergbeu18@gmail.com"
+                        href="https://t.me/sergeeva_anastasiiia"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="E-mail"
                         class="inline-flex size-8 items-center justify-center text-4f484c transition-colors duration-300 hover:text-ffb9D1"
                     >

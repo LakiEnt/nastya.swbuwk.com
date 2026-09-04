@@ -6,17 +6,32 @@ const componentPath = (name: string) => new URL(`../../app/components/${name}.vu
 
 const normalizeMarkup = (markup: string) => markup.replace(/\s+/g, " ").trim();
 
-const svgForLabel = (component: string, label: string) => {
+const anchorForLabel = (component: string, label: string) => {
   const anchorPattern = new RegExp(
-    `<a\\b(?=[\\s\\S]*?aria-label="${label}")[\\s\\S]*?<\\/a>`,
+    `<a\\b(?=[^>]*aria-label="${label}")[\\s\\S]*?<\\/a>`,
   );
   const anchor = component.match(anchorPattern)?.[0];
   assert.ok(anchor, `Expected ${label} link to exist`);
+
+  return anchor;
+};
+
+const svgForLabel = (component: string, label: string) => {
+  const anchor = anchorForLabel(component, label);
 
   const svg = anchor.match(/<svg\b[\s\S]*?<\/svg>/)?.[0];
   assert.ok(svg, `Expected ${label} link to include an SVG icon`);
 
   return normalizeMarkup(svg);
+};
+
+const hrefForLabel = (component: string, label: string) => {
+  const anchor = anchorForLabel(component, label);
+
+  const href = anchor.match(/\bhref="([^"]+)"/)?.[1];
+  assert.ok(href, `Expected ${label} link to include href`);
+
+  return href;
 };
 
 describe("layout social icons", () => {
@@ -28,5 +43,17 @@ describe("layout social icons", () => {
 
     assert.equal(svgForLabel(footer, "Telegram"), svgForLabel(header, "Telegram"));
     assert.equal(svgForLabel(footer, "E-mail"), svgForLabel(header, "E-mail"));
+  });
+
+  it("routes Telegram-labeled icons to e-mail and e-mail-labeled icons to Telegram", async () => {
+    const [header, footer] = await Promise.all([
+      readFile(componentPath("LayoutHeader"), "utf8"),
+      readFile(componentPath("LayoutFooter"), "utf8"),
+    ]);
+
+    for (const component of [header, footer]) {
+      assert.equal(hrefForLabel(component, "Telegram"), "mailto:sergbeu18@gmail.com");
+      assert.equal(hrefForLabel(component, "E-mail"), "https://t.me/sergeeva_anastasiiia");
+    }
   });
 });
