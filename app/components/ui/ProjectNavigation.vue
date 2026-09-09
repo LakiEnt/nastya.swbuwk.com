@@ -5,7 +5,7 @@
     >
         <NuxtLink
             :to="previousProjectTo"
-            class="-my-6 hidden h-24 w-40 items-center justify-center transition lg:inline-flex"
+            class="-my-6 inline-flex h-24 w-40 items-center justify-center transition"
             :class="
                 previousId ? 'text-ffb9D1 hover:text-4f484c' : ' text-ffb9D1/35'
             "
@@ -18,7 +18,7 @@
             @pointerleave="setHoveredDirection(null)"
         >
             <svg
-                class="h-auto w-[120px]"
+                class="h-auto w-[120px] max-lg:w-[140px]"
                 width="120"
                 height="62"
                 viewBox="0 0 120 62"
