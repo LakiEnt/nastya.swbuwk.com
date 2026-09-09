@@ -31,20 +31,20 @@
             </div>
         </section>
 
-        <section class="mt-22.5  grid grid-cols-2 gap-y-20 gap-x-40">
+        <section class="mt-22.5 grid grid-cols-1 lg:grid-cols-2 gap-y-14 lg:gap-y-20 gap-x-0 lg:gap-x-40">
             <div
                 v-for="item in aboutMeList"
                 :key="item.title"
-                class="flex max-lg:flex-col space-x-8"
+                class="flex max-lg:flex-col lg:space-x-8"
             >
                 <article
                     class="flex flex-col space-y-8 justify-center"
                 >
-                    <h2 class="font-neutral-face text-3xl">
+                   <h2 class="font-neutral-face text-3xl leading-[105%] break-words">
                         {{ item.title }}
                     </h2>
                     <p
-                        class="text-t2 lg:text-20 text-4f484c max-w-148"
+                       class="text-t2 lg:text-20 text-4f484c max-w-full lg:max-w-148 leading-6"
                     >
                         {{ item.description }}
                     </p>
