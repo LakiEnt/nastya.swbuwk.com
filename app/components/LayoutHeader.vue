@@ -13,7 +13,7 @@
             <div class="flex space-x-5">
                 <a
                     href="mailto:sergbeu18@gmail.com"
-                    aria-label="Telegram"
+                    aria-label="Email"
                     class="inline-flex size-8 items-center justify-center text-4f484c transition-colors duration-300 hover:text-ffb9D1 lg:ml-auto"
                 >
                     <svg
@@ -38,10 +38,10 @@
                     </svg>
                 </a>
                 <a
-                    href="https://t.me/sergeeva_anastasiiia"
+                    href="https://t.me/NastSergeeva"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="E-mail"
+                    aria-label="Telegram"
                     class="inline-flex size-8 items-center justify-center text-4f484c transition-colors duration-300 hover:text-ffb9D1"
                 >
                     <svg
