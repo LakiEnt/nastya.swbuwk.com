@@ -53,7 +53,7 @@
         </section>
 
         <section class="h-screen flex justify-center items-center">
-            <p class="text-[4rem] relative text-4f484c">
+            <p class="text-[2rem] max-lg:text-center lg:text-[4rem] relative text-4f484c">
                 {{ about.contactText }}
 
                 <img
