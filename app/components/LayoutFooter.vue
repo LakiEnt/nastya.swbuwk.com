@@ -39,7 +39,7 @@
                 </li>
                 <li>
                     <a
-                        href="https://t.me/sergeeva_anastasiiia"
+                        href="https://t.me/NastSergeeva"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="E-mail"
